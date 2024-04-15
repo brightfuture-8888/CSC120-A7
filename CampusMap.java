@@ -14,7 +14,7 @@ public class CampusMap {
      * @param b the Building to add
      */
     public void addBuilding(Building b) {
-        System.out.println("Adding building...");
+        System.out.println("Adding building...");           
         buildings.add(b);
         System.out.println("-->Successfully added " + b.getName() + " to the map.");
     }
@@ -25,7 +25,7 @@ public class CampusMap {
      * @return the removed Building
      */
     public Building removeBuilding(Building b) {
-        System.out.println("Removing building...");
+        System.out.println("Removing building..."); 
         buildings.remove(b);
         System.out.println("-->Successfully removed " + b.getName() + " to the map.");
         return b;

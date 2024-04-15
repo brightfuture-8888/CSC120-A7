@@ -74,7 +74,7 @@ public class Building {
             throw new RuntimeException("Invalid floor number. Valid range for this Building is 1-" + this.nFloors +".");
         }
         System.out.println("You are now on floor #" + floorNum + " of " + this.name);
-        this.activeFloor = floorNum;
+        this.activeFloor = floorNum;    
     }
 
     public void goUp() {
