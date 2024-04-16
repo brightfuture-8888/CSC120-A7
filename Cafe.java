@@ -5,6 +5,20 @@ public class Cafe extends Building {
     private int nCreams;
     private int nCups;
 
+    /* Overloaded constructor with name only */
+    public Cafe(String name) {
+        super(name); // Call default constructor
+        this.name = name; // Override name
+    }
+
+    /* Overloaded constructor with name, address */
+    public Cafe(String name, String address) {
+        super(name, address); // Call full constructor
+        this.name = name; // Override name
+        this.address = address; // Override address 
+    }
+
+    /* Full constructor */
     public Cafe(String name, String address, int nFloors, int nCoffeeOunces, int nSugarPackets, int nCreams,
             int nCups) {
         super(name, address, nFloors);
@@ -29,6 +43,7 @@ public class Cafe extends Building {
         this.nSugarPackets = nSugarPackets;
         this.nCreams = nCreams;
         this.nCups = nCups;
+        System.out.println();
     }
 
     public void showOptions() {
@@ -37,7 +52,9 @@ public class Cafe extends Building {
     }
 
     public static void main(String[] args) {
-        Cafe sakuraCafe = new Cafe ("Sakura Cafe", "Elm Street", 3, 8, 10, 10, 10);
+        Cafe sakuraCafe = new Cafe("Sakura Cafe", "Elm Street", 3, 8, 10, 10, 10);
         sakuraCafe.showOptions();
+        Cafe sakuraNewCafe = new Cafe("Sakura's new Cafe");
+        Cafe sakuraSecondNewCafe = new Cafe("Sakura's new second Cafe","Yokohama");
     }
 }

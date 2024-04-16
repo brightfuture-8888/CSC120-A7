@@ -6,6 +6,20 @@ public class House extends Building {
   private boolean hasDiningRoom;
   private boolean elevators;
 
+  /* Overloaded constructor with name, address */
+  public House(String name, String address) {
+    super(name, address); // Call full constructor
+    this.name= name; // Override name
+    this.address = address; // Override address 
+  }
+  /* Overloaded constructor with name, address, nFloors only */
+  public House(String name, String address,int nFloors) {
+    super(name,address,nFloors); // Call default constructor
+    this.name = name; // Override name
+    this.address = address; // Override address 
+    this.nFloors = nFloors; // Override nFloors
+  }
+
   /**
    * Creates a house with name, the address, the number of floors, and if it has a
    * dining room or not
@@ -82,18 +96,21 @@ public class House extends Building {
   public static void main(String[] args) {
     House myHouse = new House("Sakura's amazing house", "Tokyo", 5, true, true);
     System.out.println(myHouse);
+    House mySecondHouse = new House("Sakura's second house", "Northampton");
+    House myThirdHouse = new House ("Sakura's summer house", "Dubai", 7);
   }
 
   public void showOptions() {
     System.out.println(
-        "Available options at " + this.name + ":\n + enter() \n + exit() \n + goUp() \n + goDown()\n + goToFloor(n)\n + hasDiningRoom()\n + nResidents()\n + isResident()\n + moveIn()\n + moveOut()");
+        "Available options at " + this.name
+            + ":\n + enter() \n + exit() \n + goUp() \n + goDown()\n + goToFloor(n)\n + hasDiningRoom()\n + nResidents()\n + isResident()\n + moveIn()\n + moveOut()");
   }
 
   public void goToFloor(int floorNum) {
-    if(this.elevators = true){
+    if (this.elevators = true) {
       super.goToFloor(floorNum);
-    }else{
-      System.out.println("You can't go to the floor"); 
+    } else {
+      System.out.println("You can't go to the floor");
     }
   }
 }

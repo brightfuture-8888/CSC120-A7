@@ -4,7 +4,20 @@ import java.util.Hashtable;
 public class Library extends Building {
   private Hashtable<String, Boolean> collection;
   private boolean elevators;
+  private int entranceFee;
+  private int wifiCost;
 
+/* Overloaded constructor with name, entranceFee */
+public Library(String name, int entranceFee) {
+  super(name); // Call full constructor
+  this.name= name; // Override name
+  this.entranceFee = 0; // Override entranceFee 
+}
+/* Overloaded constructor with name, address, nFloors only */
+public Library(int entranceFee, int wifiCost) {
+  this.entranceFee = 10; // Override entranceFee
+  this.wifiCost = 5; // Override wifiCost
+}
   /**
    * Creates a library with name, an address, and # of floors
    * 
@@ -99,6 +112,8 @@ public class Library extends Building {
   public static void main(String[] args) {
     Library myLibrary = new Library("Sakura Library", "78 Shinjuku , Tokyo", 5, true);
     System.out.println(myLibrary);
+    Library mySecondLibrary = new Library("Sakura's Library", 60); 
+    Library myThirdLibrary = new Library(10,40);
   }
 
   public void showOptions() {
