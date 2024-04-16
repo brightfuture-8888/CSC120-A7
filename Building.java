@@ -13,7 +13,7 @@ public class Building {
     /* Overloaded constructor with address only */
     public Building(String address) {
         this(); // Call default constructor
-        this.address = address; // Override address
+        this.address = address; // Override address 
     }
 
     /* Overloaded constructor with name, address */
@@ -28,7 +28,7 @@ public class Building {
         if (nFloors < 1) {
             throw new RuntimeException("Cannot construct a building with fewer than 1 floor.");
         }
-        this.nFloors = nFloors;
+        this.nFloors = nFloors; 
     }
 
     /* Accessors */
