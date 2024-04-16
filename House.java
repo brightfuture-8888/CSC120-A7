@@ -4,6 +4,7 @@ import java.util.ArrayList;
 public class House extends Building {
   private ArrayList<String> residents;
   private boolean hasDiningRoom;
+  private boolean elevators;
 
   /**
    * Creates a house with name, the address, the number of floors, and if it has a
@@ -15,10 +16,11 @@ public class House extends Building {
    * @param hasDiningRoom
    */
 
-  public House(String name, String address, int nFloors, boolean hasDiningRoom) {
+  public House(String name, String address, int nFloors, boolean hasDiningRoom, boolean elevators) {
     super(name, address, nFloors);
     this.residents = new ArrayList<String>();
     this.hasDiningRoom = hasDiningRoom;
+    this.elevators = elevators;
   }
 
   /**
@@ -78,7 +80,7 @@ public class House extends Building {
   }
 
   public static void main(String[] args) {
-    House myHouse = new House("Sakura's amazing house", "Tokyo", 5, true);
+    House myHouse = new House("Sakura's amazing house", "Tokyo", 5, true, true);
     System.out.println(myHouse);
   }
 
@@ -87,4 +89,11 @@ public class House extends Building {
         "Available options at " + this.name + ":\n + enter() \n + exit() \n + goUp() \n + goDown()\n + goToFloor(n)\n + hasDiningRoom()\n + nResidents()\n + isResident()\n + moveIn()\n + moveOut()");
   }
 
+  public void goToFloor(int floorNum) {
+    if(this.elevators = true){
+      super.goToFloor(floorNum);
+    }else{
+      System.out.println("You can't go to the floor"); 
+    }
+  }
 }

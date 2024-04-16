@@ -35,4 +35,9 @@ public class Cafe extends Building {
         System.out.println("Available options at " + this.name
                 + ":\n + enter() \n + exit() \n + goUp() \n + goDown()\n + goToFloor(n)\n + sellCofee()\n + restock()");
     }
+
+    public static void main(String[] args) {
+        Cafe sakuraCafe = new Cafe ("Sakura Cafe", "Elm Street", 3, 8, 10, 10, 10);
+        sakuraCafe.showOptions();
+    }
 }

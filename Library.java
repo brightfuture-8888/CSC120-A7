@@ -3,6 +3,7 @@ import java.util.Hashtable;
 /* This is a stub for the Library class */
 public class Library extends Building {
   private Hashtable<String, Boolean> collection;
+  private boolean elevators;
 
   /**
    * Creates a library with name, an address, and # of floors
@@ -12,9 +13,10 @@ public class Library extends Building {
    * @param nFloors
    */
 
-  public Library(String name, String address, int nFloors) {
+  public Library(String name, String address, int nFloors, boolean elevators) {
     super(name, address, nFloors);
     this.collection = new Hashtable<String, Boolean>();
+    this.elevators = elevators;
     System.out.println(" Your library is called " + name + ", located in " + address + " with " + nFloors + " floors.");
   }
 
@@ -93,12 +95,22 @@ public class Library extends Building {
     this.collection.toString();
   }
 
+  
   public static void main(String[] args) {
-    Library myLibrary = new Library("Sakura Library", "78 Shinjuku, Tokyo,", 5);
+    Library myLibrary = new Library("Sakura Library", "78 Shinjuku , Tokyo", 5, true);
     System.out.println(myLibrary);
   }
 
   public void showOptions() {
-        System.out.println("Available options at " + this.name + ":\n + enter() \n + exit() \n + goUp() \n + goDown()\n + goToFloor(n)\n + addTitle\n +removeTitle()\n + checkOut()\n + returnBook()\n + containsTitle()\n + isAvailable()\n + printCollection()");
-    }
+    System.out.println("Available options at " + this.name
+        + ":\n + enter() \n + exit() \n + goUp() \n + goDown()\n + goToFloor(n)\n + addTitle\n +removeTitle()\n + checkOut()\n + returnBook()\n + containsTitle()\n + isAvailable()\n + printCollection()");
+  }
+
+  public void goToFloor(int floorNum) {
+    if(this.elevators = true){
+      super.goToFloor(floorNum);
+    }else{
+      System.out.println("You can't go to the floor"); 
+    } 
+  }
 }

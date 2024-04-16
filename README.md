@@ -27,7 +27,7 @@ Most `Library` buildings (and some `House`s as well) have elevators, which means
 
 
 ## Phase 2: Overloading Methods
-As we see in the `Building` class, it can often be handy to have multiple versions of a method to handle different types/numbers of input. For this phase, implement **at least 2** overloaded methods for each of the subclasses. You may choose to overload only the constructors, or any other methods of your choosing. Please document which methods you overloaded (and why!) in your `reflection.md`.
+As we see in the `Building` class, it can often be handy to have multiple versions of a method to handle different types/numbers of input. For this phase, implement **at least 2** overloaded methods for each of the subclasses. You may choose to overload only the constructors, or any other methods of your choosing. Please document which methods you overloaded (and why!) in your `reflection.md`. 
 
 ## Phase 3: `CampusMap.java`
 We'll use the `CampusMap` class to **aggregate** many different `Building`s together:
