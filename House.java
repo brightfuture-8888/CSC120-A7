@@ -9,14 +9,15 @@ public class House extends Building {
   /* Overloaded constructor with name, address */
   public House(String name, String address) {
     super(name, address); // Call full constructor
-    this.name= name; // Override name
-    this.address = address; // Override address 
-  }
-  /* Overloaded constructor with name, address, nFloors only */
-  public House(String name, String address,int nFloors) {
-    super(name,address,nFloors); // Call default constructor
     this.name = name; // Override name
-    this.address = address; // Override address 
+    this.address = address; // Override address
+  }
+
+  /* Overloaded constructor with name, address, nFloors only */
+  public House(String name, String address, int nFloors) {
+    super(name, address, nFloors); // Call default constructor
+    this.name = name; // Override name
+    this.address = address; // Override address
     this.nFloors = nFloors; // Override nFloors
   }
 
@@ -82,6 +83,13 @@ public class House extends Building {
     }
   }
 
+  /**
+   * Check if a resident is moved out from the house
+   * If a resident is not moved in the house, their name will be removed
+   * 
+   * @param name
+   * @return
+   */
   public String moveOut(String name) {
     if (!this.residents.contains(name)) {
       return (name + " is not enrolled at " + this.name);
@@ -93,21 +101,34 @@ public class House extends Building {
     }
   }
 
+  /**
+   * Creates a library
+   * 
+   * @param args
+   */
   public static void main(String[] args) {
     House myHouse = new House("Sakura's amazing house", "Tokyo", 5, true, true);
     System.out.println(myHouse);
     House mySecondHouse = new House("Sakura's second house", "Northampton");
     System.out.println(mySecondHouse.name + " " + "is located at" + " " + mySecondHouse.address);
-    House myThirdHouse = new House ("Sakura's summer house", "Dubai", 7);
-    System.out.println(myThirdHouse.name + " " + "is located at " + myThirdHouse.address + " " + "with" + " "+ myThirdHouse.nFloors + " " +"floors"); 
+    House myThirdHouse = new House("Sakura's summer house", "Dubai", 7);
+    System.out.println(myThirdHouse.name + " " + "is located at " + myThirdHouse.address + " " + "with" + " "
+        + myThirdHouse.nFloors + " " + "floors");
   }
 
+  /**
+   * Print available options
+   */
   public void showOptions() {
     System.out.println(
         "Available options at " + this.name
             + ":\n + enter() \n + exit() \n + goUp() \n + goDown()\n + goToFloor(n)\n + hasDiningRoom()\n + nResidents()\n + isResident()\n + moveIn()\n + moveOut()");
   }
 
+  /**
+   * If there is an elevator in this house, go to the floor number that is put
+   * If not, print "You can't go to the floor"
+   */
   public void goToFloor(int floorNum) {
     if (this.elevators = true) {
       super.goToFloor(floorNum);
