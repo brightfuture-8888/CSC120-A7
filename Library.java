@@ -117,9 +117,9 @@ public Library(int entranceFee, int wifiCost) {
     Library myLibrary = new Library("Sakura Library", "78 Shinjuku , Tokyo", 5, true);
     System.out.println(myLibrary);
     Library mySecondLibrary = new Library("Sakura's second Library", 60); 
-    System.out.println(mySecondLibrary.address);
+    System.out.println(mySecondLibrary.name + " " + "has an entrance fee of" + " " + "$"+ mySecondLibrary.entranceFee);
     Library myThirdLibrary = new Library(10,40);
-    System.out.println(myThirdLibrary);
+    System.out.println("Sakura's third library has $" + myThirdLibrary.entranceFee + " " +"of an entrance fee"+ " " + "and the wifi there costs" + " "+ "$" + myThirdLibrary.wifiCost);
     myLibrary.addTitle("History of CS");
     myLibrary.printCollection();
   }

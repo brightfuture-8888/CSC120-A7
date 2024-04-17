@@ -57,6 +57,6 @@ public class Cafe extends Building {
         Cafe sakuraNewCafe = new Cafe("Sakura's new Cafe");
         System.out.println(sakuraNewCafe.name); 
         Cafe sakuraSecondNewCafe = new Cafe("Sakura's new second Cafe","Yokohama");
-        System.out.println(sakuraSecondNewCafe.address); 
+        System.out.println(sakuraSecondNewCafe.name + " " + "at" + " " + sakuraSecondNewCafe.address); 
     }
 }

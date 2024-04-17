@@ -66,16 +66,16 @@ public class CampusMap {
         cushing.goToFloor(2);
         cushing.goDown(); 
 
-        Cafe campusCafe = new Cafe("Campus Cafe");
+        Cafe campusCafe = new Cafe("Campus Cafe", "Elm Street 100, MA 01063");
         myMap.addBuilding(campusCafe);
         campusCafe.enter();
 
-        Cafe neilsonLibraryCafe = new Cafe("Neilson Library Cafe", "Elm Street Northampton, MA 01063");
+        Cafe neilsonLibraryCafe = new Cafe("Neilson Library Cafe", "Elm Street 45 Northampton, MA 01063");
         neilsonLibraryCafe.sellCoffee(100,100,100);
         myMap.addBuilding(neilsonLibraryCafe);
         neilsonLibraryCafe.enter();
 
-        Library hillyer = new Library("Hillyer Library",7);
+        Library hillyer = new Library("Hillyer Library", "Elm Street 10 Northampton, MA 01063",2,true);
         hillyer.enter();
         hillyer.addTitle("Northamptno's History");
         hillyer.printCollection();
