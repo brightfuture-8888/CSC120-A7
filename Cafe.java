@@ -4,6 +4,7 @@ public class Cafe extends Building {
     private int nSugarPackets;
     private int nCreams;
     private int nCups;
+    private boolean elevators;
 
     /* Overloaded constructor with name only */
     public Cafe(String name) {
@@ -82,5 +83,17 @@ public class Cafe extends Building {
         System.out.println(sakuraNewCafe.name);
         Cafe sakuraSecondNewCafe = new Cafe("Sakura's new second Cafe", "Yokohama");
         System.out.println(sakuraSecondNewCafe.name + " " + "at" + " " + sakuraSecondNewCafe.address);
+    }
+
+    /**
+     * If there is an elevator in this house, go to the floor number that is put
+     * If not, print "You can't go to the floor"
+     */
+    public void goToFloor(int floorNum) {
+        if (this.elevators = true) {
+            super.goToFloor(floorNum);
+        } else {
+            System.out.println("You can't go to the floor");
+        }
     }
 }
