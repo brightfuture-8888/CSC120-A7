@@ -97,7 +97,9 @@ public class House extends Building {
     House myHouse = new House("Sakura's amazing house", "Tokyo", 5, true, true);
     System.out.println(myHouse);
     House mySecondHouse = new House("Sakura's second house", "Northampton");
+    System.out.println(mySecondHouse.name + " " + mySecondHouse.address);
     House myThirdHouse = new House ("Sakura's summer house", "Dubai", 7);
+    System.out.println(myThirdHouse.address); 
   }
 
   public void showOptions() {

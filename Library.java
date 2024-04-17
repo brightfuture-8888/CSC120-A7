@@ -10,11 +10,13 @@ public class Library extends Building {
 /* Overloaded constructor with name, entranceFee */
 public Library(String name, int entranceFee) {
   super(name); // Call full constructor
+  this.collection = new Hashtable<String, Boolean>();
   this.name= name; // Override name
   this.entranceFee = 0; // Override entranceFee 
 }
 /* Overloaded constructor with name, address, nFloors only */
 public Library(int entranceFee, int wifiCost) {
+  this.collection = new Hashtable<String, Boolean>();
   this.entranceFee = 10; // Override entranceFee
   this.wifiCost = 5; // Override wifiCost
 }
@@ -39,12 +41,14 @@ public Library(int entranceFee, int wifiCost) {
    * @param title
    */
   public void addTitle(String title) {
-    if (this.collection.contains(title)) {
-      throw new RuntimeException(title + " is already in " + title);
-    } else {
-      System.out.print("Adding " + title + " in " + title + "...");
-      this.collection.put(title, true);
-      System.out.println("Success!");
+    if(this.collection.size()>0){
+      if (this.collection.contains(title)) {
+        throw new RuntimeException(title + " is already in " + title);
+      } else {
+        System.out.print("Adding " + title + " in " + title + "...");
+        this.collection.put(title, true);
+        System.out.println("Success!");
+      }
     }
   }
 
@@ -104,16 +108,20 @@ public Library(int entranceFee, int wifiCost) {
    * 
    * @param title
    */
-  public void printCollection(String title) {
-    this.collection.toString();
+  public void printCollection() {
+    System.out.println(this.collection.toString());
   }
 
   
   public static void main(String[] args) {
     Library myLibrary = new Library("Sakura Library", "78 Shinjuku , Tokyo", 5, true);
     System.out.println(myLibrary);
-    Library mySecondLibrary = new Library("Sakura's Library", 60); 
+    Library mySecondLibrary = new Library("Sakura's second Library", 60); 
+    System.out.println(mySecondLibrary.address);
     Library myThirdLibrary = new Library(10,40);
+    System.out.println(myThirdLibrary);
+    myLibrary.addTitle("History of CS");
+    myLibrary.printCollection();
   }
 
   public void showOptions() {
