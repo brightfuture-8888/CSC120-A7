@@ -142,10 +142,6 @@ public class Library extends Building {
    * If not, print "You can't go to the floor"
    */
   public void goToFloor(int floorNum) {
-    if (this.elevators = true) {
-      super.goToFloor(floorNum);
-    } else {
-      System.out.println("You can't go to the floor");
-    }
+    super.goToFloor(floorNum); 
   }
 }
