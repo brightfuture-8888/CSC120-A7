@@ -72,6 +72,7 @@ public class Cafe extends Building {
                 + ":\n + enter() \n + exit() \n + goUp() \n + goDown()\n + goToFloor(n)\n + sellCofee()\n + restock()");
     }
 
+    
     /**
      * Create Cafe
      * 
@@ -88,13 +89,24 @@ public class Cafe extends Building {
 
     /**
      * If there is an elevator in this house, go to the floor number that is put
-     * If not, print "You can't go to the floor"
+     * If not, tell the player the valid range of the elevator 
      */
     public void goToFloor(int floorNum) {
-        if (this.elevators = true) {
-            super.goToFloor(floorNum);
-        } else {
-            System.out.println("You can't go to the floor");
+        if (this.activeFloor == -1) {
+            throw new RuntimeException("You are not inside this Building. Must call enter() before navigating between floors.");
         }
+        if (floorNum < 1 || floorNum > this.nFloors) {
+            throw new RuntimeException("Invalid floor number. Valid range for this Building is 1-" + this.nFloors +".");
+        }
+        System.out.println("You are now on floor #" + floorNum + " of " + this.name);
+        this.activeFloor = floorNum;    
+    }
+
+    public void goUp() {
+        throw new RuntimeException("You can't go into this floor. Cleaning happneing.");
+    }
+
+    public void goDown() {
+        throw new RuntimeException("You can't go into this floor. Only VIP can enter.");
     }
 }
