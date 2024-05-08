@@ -127,7 +127,7 @@ public class Library extends Building {
     System.out.println("Sakura's third library has $" + myThirdLibrary.entranceFee + " " + "of an entrance fee" + " "
         + "and the wifi there costs" + " " + "$" + myThirdLibrary.wifiCost);
     myLibrary.addTitle("History of CS");
-    myLibrary.printCollection();
+    myLibrary.printCollection(); 
   }
 
   /* print available options of the library with methods */
