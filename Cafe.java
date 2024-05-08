@@ -4,7 +4,6 @@ public class Cafe extends Building {
     private int nSugarPackets;
     private int nCreams;
     private int nCups;
-    private boolean elevators;
 
     /* Overloaded constructor with name only */
     public Cafe(String name) {

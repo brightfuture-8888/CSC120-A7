@@ -138,10 +138,9 @@ public class Library extends Building {
   }
 
   /*
-   * If a library has an elevator,go to the floor number that is put
-   * If not, print "You can't go to the floor"
+   * inherit goToFloor method from Building Class
    */
   public void goToFloor(int floorNum) {
-    super.goToFloor(floorNum); 
+    super.goToFloor(floorNum);
   }
 }
