@@ -67,6 +67,7 @@ public class Cafe extends Building {
 
     /** Print available options */
     public void showOptions() {
+        super.showOptions();
         System.out.println("Available options at " + this.name
                 + ":\n + enter() \n + exit() \n + goUp() \n + goDown()\n + goToFloor(n)\n + sellCofee()\n + restock()");
     }
