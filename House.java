@@ -130,11 +130,11 @@ public class House extends Building {
    * If there is an elevator in this house, go to the floor number that is put
    * If not, print "You can't go to the floor"
    */
-  public void goToFloor(int floorNum) {
-    if (this.elevators = true) {
+  public void goToFloor(int floorNum) { 
+    if (this.elevators == true) {
       super.goToFloor(floorNum);
     } else {
-      System.out.println("You can't go to the floor");
+      System.out.println("You can't go to the floor. If you don't have an elevator going up or down, use goUp() or goDown() method");
     }
   }
 }
